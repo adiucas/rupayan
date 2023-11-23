@@ -1,0 +1,24 @@
+body .zoom-btns, body .mark-erase {
+  position: fixed;
+  bottom: 15px;
+  right: 15px; }
+  body .zoom-btns a, body .mark-erase a {
+    padding: 5px 10px;
+    background: #008cff;
+    color: #fff;
+    text-decoration: none; }
+body .mark-erase {
+  bottom: 15px;
+  right: unset;
+  left: 15px; }
+
+.container {
+  text-align: center; }
+  .container svg {
+    filter: drop-shadow(0px 0px 1px #ffffff);
+    height: 100vh; }
+    .container svg #plot_lines,
+    .container svg #num_text {
+      pointer-events: none; }
+
+/*# sourceMappingURL=style.css.map */
