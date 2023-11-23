@@ -13,9 +13,15 @@ body .mark-erase {
   left: 15px; }
 
 .container {
-  text-align: center; }
+  display: flex;
+  justify-content: center;
+  width: 100%; }
+  .container .pixel-picker-container {
+    width: 100%;
+    height: 100vh; }
   .container svg {
     filter: drop-shadow(0px 0px 1px #ffffff);
+    width: 100%;
     height: 100vh; }
     .container svg #plot_lines,
     .container svg #num_text {
