@@ -1,79 +1,184 @@
-// body {
-
-//     .zoom-btns {
-//         position: fixed;
-//         bottom: 15px;
-//         right: 15px;
-
-//         a {
-//             padding: 5px 10px;
-//             background: rgb(0, 140, 255);
-//             color: #fff;
-//             text-decoration: none;
-//         }
-//     }
-
-//     .mark-erase {
-//         @extend .zoom-btns;
-//         bottom: 15px;
-//         right: unset;
-//         left: 15px;
-//     }
-// }
-
-// .container {
-//     text-align: center;
-//     svg {
-//         filter: drop-shadow(0px 0px 1px #ffffff);
-//         height: 100vh;
-
-//         #plot_lines,
-//         #num_text {
-//             pointer-events: none;
-//         }
-//     }
-// }
-
-body {
-
-    .zoom-btns {
-        position: fixed;
-        bottom: 15px;
-        right: 15px;
-
-        a {
-            padding: 5px 10px;
-            background: rgb(0, 140, 255);
-            color: #fff;
-            text-decoration: none;
-        }
-    }
-
-    .mark-erase {
-        @extend .zoom-btns;
-        bottom: 15px;
-        right: unset;
-        left: 15px;
-    }
+* {
+    margin: 0;
+    padding: 0;
 }
 
-.container {
+$pc: #2E3192;
+
+.geo-container {
     display: flex;
     justify-content: center;
     width: 100%;
 
-    .pixel-picker-container{
+    .pixel-picker-container {
         width: 100%;
         height: 100vh;
     }
+
     svg {
         filter: drop-shadow(0px 0px 1px #ffffff);
         width: 100%;
         height: 100vh;
 
         #plot_lines,
-        #num_text {
+        #num_text,
+        text {
             pointer-events: none;
+        }
+    }
+}
+
+.modal-body {
+    background: $pc;
+}
+
+.btn-close {
+    position: absolute;
+    right: -40px;
+    text-shadow: unset;
+    color: red;
+    line-height: unset;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    background: none;
+
+    &:hover {
+        color: red;
+    }
+}
+
+button.btn-close {
+    background-color: #ffffff;
+
+    i {
+        font-size: 1rem;
+    }
+}
+
+.popover-body {
+    color: #ffffff;
+    display: flex;
+    padding: unset;
+    flex-wrap: wrap;
+}
+
+.pop-content {
+    padding: (.5rem/2) (.75rem/2);
+    box-sizing: border-box;
+    flex-grow: 1;
+
+    &.road {
+        flex-grow: 2;
+    }
+
+    &.size {
+        flex-grow: 2;
+    }
+
+    &.facing,
+    &.file-number,
+    &.client-phone,
+    &.plot-status,
+    &.sell-date {
+        flex-grow: 1;
+    }
+
+    &.client-name,
+    &.client-address {
+        flex-basis: 100%;
+    }
+}
+
+.pop-title {
+    font-weight: bold;
+}
+
+.pop-value {
+    padding: 2.5px 10px;
+    background: lighten($pc, 15%);
+    border-radius: 5px;
+    min-height: 30px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: -webkit-fill-available;
+    background: #eeeeee;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 10px 15px;
+
+    .mark-erase {
+        p {
+            margin-bottom: 10px;
+        }
+
+        a {
+            padding: 5px 10px;
+            background: rgb(0, 140, 255);
+            color: #fff;
+            text-decoration: none;
+
+            &.selected {
+                background: #2E3192;
+            }
+        }
+    }
+
+    .color-options {
+        p {
+            margin-bottom: 5px;
+        }
+
+        .colors {
+            a {
+                width: 30px;
+                height: 30px;
+                border-radius: 30px;
+                display: inline-block;
+                box-sizing: border-box;
+
+                &.color1 {
+                    background-color: #ff0000;
+                }
+
+                &.color2 {
+                    background-color: #008000;
+                }
+
+                &.color3 {
+                    background-color: #0000ff;
+                }
+
+                &:not(:last-child) {
+                    margin-right: 5px;
+                }
+
+                &.selected {
+                    border: 3px solid #000;
+                }
+            }
+        }
+    }
+
+    .zoom-range {
+        p {
+            margin: unset;
+            margin-bottom: 5px;
+        }
+
+        #amount {
+            background: unset;
+            outline: none;
+            border: none;
+            font-weight: bold;
         }
     }
 }

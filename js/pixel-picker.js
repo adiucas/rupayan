@@ -49,7 +49,7 @@
       var nextIndex = (function () {
         if (reverse) {
           // Go back in the array, or to the end if we've reached the beginning
-          return (currentIndex - 1) === -1 ? palette.length - 1 : (currentIndex - 1);
+          //return (currentIndex - 1) === -1 ? palette.length - 1 : (currentIndex - 1);
         } else {
           // Go forward in the array, or the beginning if we've reached the end
           return (currentIndex + 1) in palette ? (currentIndex + 1) : 0;
@@ -108,7 +108,10 @@
 
     // Convert an RGB array back to a CSS RGB color
     arrayToRgb = function (inArray) {
-      return 'rgb(' + inArray[0] + ', ' + inArray[1] + ', ' + inArray[2] + ')';
+      if (inArray != undefined) {
+        return 'rgb(' + inArray[0] + ', ' + inArray[1] + ', ' + inArray[2] + ')';
+      }
+
     };
 
     // Check if two arrays are exacty the same
@@ -145,19 +148,19 @@
       palette.unshift(parseColor(settings.eraserColor));
     };
 
-    $(window)
-      // Prevent context menu from showing up over top of cells
-      .on('contextmenu', function (event) {
-        if ($(event.target).hasClass(settings.cellSelector.substring(1))) return event.preventDefault();
-      })
-      // When CTRL (Mac) or CMD (Windows) key is down, eraser is active
-      .on('keydown', function (event) {
-        if (event.metaKey || event.ctrlKey) isErasing = true;
-      })
-      // When CTRL (Mac) or CMD (Windows) key is released, eraser is inactive
-      .on('keyup', function (event) {
-        if (!event.metaKey && !event.ctrlKey) isErasing = false;
-      });
+    // $(window)
+    //   // Prevent context menu from showing up over top of cells
+    //   .on('contextmenu', function (event) {
+    //     if ($(event.target).hasClass(settings.cellSelector.substring(1))) return event.preventDefault();
+    //   })
+    //   // When CTRL (Mac) or CMD (Windows) key is down, eraser is active
+    //   .on('keydown', function (event) {
+    //     if (event.metaKey || event.ctrlKey) isErasing = true;
+    //   })
+    //   // When CTRL (Mac) or CMD (Windows) key is released, eraser is inactive
+    //   .on('keyup', function (event) {
+    //     if (!event.metaKey && !event.ctrlKey) isErasing = false;
+    //   });
 
     // Find all the rows
     rows = this.find(settings.rowSelector);
