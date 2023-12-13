@@ -181,7 +181,7 @@ button.btn-close {
             position: absolute;
             top: 0;
             right: 56px;
-            padding: 5px 10px;
+            padding: 10px 20px;
             display: none;
 
             &.show {
@@ -194,9 +194,9 @@ button.btn-close {
 
             .colors {
                 a {
-                    width: 30px;
-                    height: 30px;
-                    border-radius: 30px;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 40px;
                     display: inline-block;
                     box-sizing: border-box;
 
@@ -213,7 +213,7 @@ button.btn-close {
                     }
 
                     &:not(:last-child) {
-                        margin-right: 5px;
+                        margin-right: 10px;
                     }
 
                     &.selected {
