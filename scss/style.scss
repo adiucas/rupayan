@@ -104,81 +104,141 @@ button.btn-close {
     min-height: 30px;
 }
 
-footer {
+.action-btns {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: -webkit-fill-available;
-    background: #eeeeee;
+    flex-direction: column;
     position: fixed;
-    bottom: 0;
-    left: 0;
-    padding: 10px 15px;
+    top: 15px;
+    right: 15px;
+
+    .label {
+        text-transform: capitalize;
+        white-space: nowrap;
+    }
+
+    .button-togller {
+        border-radius: 100px;
+        padding: 0;
+        width: 45px;
+        height: 45px;
+        position: relative;
+        z-index: 1;
+    }
 
     .mark-erase {
-        p {
-            margin-bottom: 10px;
-        }
+        position: relative;
+        margin-bottom: 10px;
 
-        a {
-            padding: 5px 10px;
-            background: rgb(0, 140, 255);
-            color: #fff;
-            text-decoration: none;
+        .cursor-types {
+            background: lighten($color: $pc, $amount: 55%);
+            border: 1px solid lighten($color: $pc, $amount: 45%);
+            border-radius: 8px;
+            padding: 10px 20px;
+            position: absolute;
+            top: 0;
+            right: 56px;
+            display: none;
 
-            &.selected {
-                background: #2E3192;
+            &.show {
+                display: unset;
+            }
+
+            p {
+                margin-bottom: 5px;
+            }
+
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: rgb(0, 140, 255);
+                color: #fff;
+                text-decoration: none;
+                width: 40px;
+                height: 40px;
+                border-radius: 40px;
+                box-sizing: border-box;
+                font-size: 14px;
+
+                &:not(:last-child) {
+                    margin-right: 10px;
+                }
+
+                &.selected {
+                    background: #2E3192;
+                }
             }
         }
     }
 
     .color-options {
-        p {
-            margin-bottom: 5px;
-        }
+        position: relative;
 
-        .colors {
-            a {
-                width: 30px;
-                height: 30px;
-                border-radius: 30px;
-                display: inline-block;
-                box-sizing: border-box;
+        .color-option-container {
+            background: lighten($color: $pc, $amount: 55%);
+            border: 1px solid lighten($color: $pc, $amount: 45%);
+            border-radius: 8px;
+            position: absolute;
+            top: 0;
+            right: 56px;
+            padding: 5px 10px;
+            display: none;
 
-                &.color1 {
-                    background-color: #ff0000;
-                }
+            &.show {
+                display: unset;
+            }
 
-                &.color2 {
-                    background-color: #008000;
-                }
+            p {
+                margin-bottom: 5px;
+            }
 
-                &.color3 {
-                    background-color: #0000ff;
-                }
+            .colors {
+                a {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 30px;
+                    display: inline-block;
+                    box-sizing: border-box;
 
-                &:not(:last-child) {
-                    margin-right: 5px;
-                }
+                    &.color1 {
+                        background-color: #ff0000;
+                    }
 
-                &.selected {
-                    border: 3px solid #000;
+                    &.color2 {
+                        background-color: #008000;
+                    }
+
+                    &.color3 {
+                        background-color: #0000ff;
+                    }
+
+                    &:not(:last-child) {
+                        margin-right: 5px;
+                    }
+
+                    &.selected {
+                        border: 3px solid #000;
+                    }
                 }
             }
         }
     }
+}
 
-    .zoom-range {
-        p {
-            margin: unset;
-            margin-bottom: 5px;
-        }
+.zoom-range {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
 
-        #amount {
-            background: unset;
-            outline: none;
-            border: none;
-            font-weight: bold;
-        }
+    p {
+        margin: unset;
+        margin-bottom: 5px;
+    }
+
+    #amount {
+        background: unset;
+        outline: none;
+        border: none;
+        font-weight: bold;
     }
 }

@@ -70,47 +70,94 @@ button.btn-close {
   border-radius: 5px;
   min-height: 30px; }
 
-footer {
+.action-btns {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: -webkit-fill-available;
-  background: #eeeeee;
+  flex-direction: column;
   position: fixed;
-  bottom: 0;
-  left: 0;
-  padding: 10px 15px; }
-  footer .mark-erase p {
+  top: 15px;
+  right: 15px; }
+  .action-btns .label {
+    text-transform: capitalize;
+    white-space: nowrap; }
+  .action-btns .button-togller {
+    border-radius: 100px;
+    padding: 0;
+    width: 45px;
+    height: 45px;
+    position: relative;
+    z-index: 1; }
+  .action-btns .mark-erase {
+    position: relative;
     margin-bottom: 10px; }
-  footer .mark-erase a {
-    padding: 5px 10px;
-    background: #008cff;
-    color: #fff;
-    text-decoration: none; }
-    footer .mark-erase a.selected {
-      background: #2E3192; }
-  footer .color-options p {
-    margin-bottom: 5px; }
-  footer .color-options .colors a {
-    width: 30px;
-    height: 30px;
-    border-radius: 30px;
-    display: inline-block;
-    box-sizing: border-box; }
-    footer .color-options .colors a.color1 {
-      background-color: #ff0000; }
-    footer .color-options .colors a.color2 {
-      background-color: #008000; }
-    footer .color-options .colors a.color3 {
-      background-color: #0000ff; }
-    footer .color-options .colors a:not(:last-child) {
-      margin-right: 5px; }
-    footer .color-options .colors a.selected {
-      border: 3px solid #000; }
-  footer .zoom-range p {
+    .action-btns .mark-erase .cursor-types {
+      background: #e2e3f6;
+      border: 1px solid #bcbdea;
+      border-radius: 8px;
+      padding: 10px 20px;
+      position: absolute;
+      top: 0;
+      right: 56px;
+      display: none; }
+      .action-btns .mark-erase .cursor-types.show {
+        display: unset; }
+      .action-btns .mark-erase .cursor-types p {
+        margin-bottom: 5px; }
+      .action-btns .mark-erase .cursor-types a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #008cff;
+        color: #fff;
+        text-decoration: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 40px;
+        box-sizing: border-box;
+        font-size: 14px; }
+        .action-btns .mark-erase .cursor-types a:not(:last-child) {
+          margin-right: 10px; }
+        .action-btns .mark-erase .cursor-types a.selected {
+          background: #2E3192; }
+  .action-btns .color-options {
+    position: relative; }
+    .action-btns .color-options .color-option-container {
+      background: #e2e3f6;
+      border: 1px solid #bcbdea;
+      border-radius: 8px;
+      position: absolute;
+      top: 0;
+      right: 56px;
+      padding: 5px 10px;
+      display: none; }
+      .action-btns .color-options .color-option-container.show {
+        display: unset; }
+      .action-btns .color-options .color-option-container p {
+        margin-bottom: 5px; }
+      .action-btns .color-options .color-option-container .colors a {
+        width: 30px;
+        height: 30px;
+        border-radius: 30px;
+        display: inline-block;
+        box-sizing: border-box; }
+        .action-btns .color-options .color-option-container .colors a.color1 {
+          background-color: #ff0000; }
+        .action-btns .color-options .color-option-container .colors a.color2 {
+          background-color: #008000; }
+        .action-btns .color-options .color-option-container .colors a.color3 {
+          background-color: #0000ff; }
+        .action-btns .color-options .color-option-container .colors a:not(:last-child) {
+          margin-right: 5px; }
+        .action-btns .color-options .color-option-container .colors a.selected {
+          border: 3px solid #000; }
+
+.zoom-range {
+  position: fixed;
+  bottom: 15px;
+  right: 15px; }
+  .zoom-range p {
     margin: unset;
     margin-bottom: 5px; }
-  footer .zoom-range #amount {
+  .zoom-range #amount {
     background: unset;
     outline: none;
     border: none;
