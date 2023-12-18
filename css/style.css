@@ -140,9 +140,9 @@ button.btn-close {
         display: inline-block;
         box-sizing: border-box; }
         .action-btns .color-options .color-option-container .colors a.color1 {
-          background-color: #ff0000; }
+          background-color: red; }
         .action-btns .color-options .color-option-container .colors a.color2 {
-          background-color: #008000; }
+          background-color: green; }
         .action-btns .color-options .color-option-container .colors a.color3 {
           background-color: #0000ff; }
         .action-btns .color-options .color-option-container .colors a:not(:last-child) {

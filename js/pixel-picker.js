@@ -62,6 +62,26 @@
 
     // Apply the global current color as the cell's background
     applyColor = function (cell) {
+      if (currentTool == "#2E3192") {
+        cell.removeClass(['marked-color1', 'marked-color2', 'marked-color3', 'erased']);
+        cell.addClass("marked-default");
+      }
+      if (currentTool == "#ff0000") {
+        cell.removeClass(['marked-default', 'marked-color2', 'marked-color3', 'erased']);
+        cell.addClass("marked-color1");
+      }
+      if (currentTool == "#008000") {
+        cell.removeClass(['marked-default', 'marked-color1', 'marked-color3', 'erased']);
+        cell.addClass("marked-color2");
+      }
+      if (currentTool == "#0000ff") {
+        cell.removeClass(['marked-default', 'marked-color2', 'marked-color1', 'erased']);
+        cell.addClass("marked-color3");
+      }
+      if (currentTool == "#ffffff") {
+        cell.removeClass(['marked-default', 'marked-color2', 'marked-color3', 'marked-color1']);
+        cell.addClass("erased");
+      }
       return cell.css('fill', arrayToRgb(currentColor));
     };
 
@@ -111,7 +131,6 @@
       if (inArray != undefined) {
         return 'rgb(' + inArray[0] + ', ' + inArray[1] + ', ' + inArray[2] + ')';
       }
-
     };
 
     // Check if two arrays are exacty the same
@@ -129,7 +148,6 @@
       cellSelector: '.pixel-picker-cell',
       eraserColor: null,
       palette: [
-        'rgb(255, 0, 0)', '#828282'
       ]
     }, options);
 
