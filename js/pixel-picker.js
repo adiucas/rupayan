@@ -61,27 +61,17 @@
     };
 
     // Apply the global current color as the cell's background
+    let cursorInfo = document.querySelectorAll('[data-cursor]');
+    let cursorInfoList = [];
+    for (var key in cursorInfo) {
+      if (cursorInfo.hasOwnProperty(key)) {
+        cursorInfoList.push(cursorInfo[key].getAttribute("data-cursor"));
+      }
+    }
+
     applyColor = function (cell) {
-      if (currentTool == "#2E3192") {
-        cell.removeClass(['marked-color1', 'marked-color2', 'marked-color3', 'erased']);
-        cell.addClass("marked-default");
-      }
-      if (currentTool == "#ff0000") {
-        cell.removeClass(['marked-default', 'marked-color2', 'marked-color3', 'erased']);
-        cell.addClass("marked-color1");
-      }
-      if (currentTool == "#008000") {
-        cell.removeClass(['marked-default', 'marked-color1', 'marked-color3', 'erased']);
-        cell.addClass("marked-color2");
-      }
-      if (currentTool == "#0000ff") {
-        cell.removeClass(['marked-default', 'marked-color2', 'marked-color1', 'erased']);
-        cell.addClass("marked-color3");
-      }
-      if (currentTool == "#ffffff") {
-        cell.removeClass(['marked-default', 'marked-color2', 'marked-color3', 'marked-color1']);
-        cell.addClass("erased");
-      }
+      cell.removeClass(cursorInfoList);
+      cell.addClass($('.selected').attr("data-cursor"));
       return cell.css('fill', arrayToRgb(currentColor));
     };
 

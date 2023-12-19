@@ -125,6 +125,15 @@ button.btn-close {
         z-index: 1;
     }
 
+    .fa-caret-right {
+        position: absolute;
+        right: -9px;
+        font-size: 30px;
+        color: #e2e3f6;
+        text-shadow:
+            1px -1px 0 #bcbdea, 1px -1px 0 #bcbdea, 1px 1px 0 #bcbdea, 1px 1px 0 #bcbdea;
+    }
+
     .mark-erase {
         position: relative;
         margin-bottom: 10px;
