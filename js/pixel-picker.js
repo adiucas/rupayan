@@ -72,6 +72,7 @@
     applyColor = function (cell) {
       cell.removeClass(cursorInfoList);
       cell.addClass($('.selected').attr("data-cursor"));
+      saveHandler(0);
       return cell.css('fill', arrayToRgb(currentColor));
     };
 
