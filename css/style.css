@@ -26,7 +26,7 @@
     background-color: #3a3eb9; }
     .modal .modal-content .modal-header {
       color: #ffffff;
-      border-bottom: unset; }
+      border-bottom: 1px solid rgba(255, 255, 255, 0.25); }
       .modal .modal-content .modal-header .btn-close {
         right: -45px;
         text-shadow: unset;
@@ -202,9 +202,27 @@
 body {
   position: relative; }
 
-#saveBtn {
-  position: fixed;
-  bottom: 15px;
-  left: 15px; }
+.save-alert {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  display: none; }
+  .save-alert.show {
+    display: block; }
+  .save-alert .alert {
+    display: flex;
+    flex-direction: row;
+    align-items: center; }
+
+/***** sweet alert *****/
+div:where(.swal2-container) div:where(.swal2-popup) {
+  background: #e2e3f6;
+  border-radius: 32px;
+  color: #2E3192; }
+  div:where(.swal2-container) div:where(.swal2-popup) div:where(.swal2-icon).swal2-warning {
+    border-color: var(--bs-warning);
+    color: var(--bs-warning); }
+
+/***** End sweet alert *****/
 
 /*# sourceMappingURL=style.css.map */

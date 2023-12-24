@@ -54,7 +54,7 @@ $pc: #2E3192;
 
         .modal-header {
             color: #ffffff;
-            border-bottom: unset;
+            border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.25);
 
             .btn-close {
                 // position: absolute;
@@ -338,8 +338,31 @@ body {
     position: relative;
 }
 
-#saveBtn {
-    position: fixed;
-    bottom: 15px;
+.save-alert {
+    position: absolute;
+    top: 15px;
     left: 15px;
+    display: none;
+
+    &.show {
+        display: block;
+    }
+
+    .alert {
+        @include flex(row, null, center);
+    }
 }
+
+/***** sweet alert *****/
+div:where(.swal2-container) div:where(.swal2-popup) {
+    background: lighten($color: $pc, $amount: 55%);
+    border-radius: 32px;
+    color: $pc;
+
+    div:where(.swal2-icon).swal2-warning {
+        border-color: var(--bs-warning);
+        color: var(--bs-warning);
+    }
+}
+
+/***** End sweet alert *****/
