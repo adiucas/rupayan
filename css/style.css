@@ -23,7 +23,7 @@
   .modal .modal-content {
     border-radius: 18px;
     border: 1px solid rgba(255, 255, 255, 0.25);
-    background-color: #6e71d1; }
+    background-color: #3a3eb9; }
     .modal .modal-content .modal-header {
       color: #ffffff;
       border-bottom: unset; }
@@ -73,7 +73,7 @@
         .modal .modal-content .modal-body .table .tbody:after {
           display: none; }
         .modal .modal-content .modal-body .table .tbody .tr {
-          background-color: #6e71d1; }
+          background-color: #3a3eb9; }
           .modal .modal-content .modal-body .table .tbody .tr.hoverable:hover {
             background: rgba(46, 49, 146, 0.15);
             cursor: pointer; }
