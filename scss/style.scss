@@ -360,7 +360,6 @@ div:where(.swal2-container) div:where(.swal2-popup) {
     color: $pc;
 
     div:where(.swal2-icon).swal2-warning {
-        border-color: var(--bs-warning);
         color: var(--bs-warning);
     }
 }
