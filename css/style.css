@@ -175,12 +175,6 @@
           box-sizing: border-box; }
           .action-btns .color-options .color-option-container .colors a.mark {
             background-color: #2E3192; }
-          .action-btns .color-options .color-option-container .colors a.color1 {
-            background-color: red; }
-          .action-btns .color-options .color-option-container .colors a.color2 {
-            background-color: green; }
-          .action-btns .color-options .color-option-container .colors a.color3 {
-            background-color: #0000ff; }
           .action-btns .color-options .color-option-container .colors a:not(:last-child) {
             margin-right: 10px; }
           .action-btns .color-options .color-option-container .colors a.selected {

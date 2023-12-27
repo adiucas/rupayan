@@ -1,0 +1,22 @@
+{
+    "color1": {
+        "hexCode": "#ff0000",
+        "dataCursor": "c1"
+    },
+    "color2": {
+        "hexCode": "#007e1d",
+        "dataCursor": "c2"
+    },
+    "color3": {
+        "hexCode": "#0066ff",
+        "dataCursor": "c3"
+    },
+    "color4": {
+        "hexCode": "#ffbf00",
+        "dataCursor": "c4"
+    },
+    "color5": {
+        "hexCode": "#9000ff",
+        "dataCursor": "c5"
+    }
+}
