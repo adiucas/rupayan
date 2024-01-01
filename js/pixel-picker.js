@@ -200,7 +200,7 @@
 
           // Now we do all the work
           cycleColor(cell, isRightClick);
-          applyColor(cell);
+          // applyColor(cell);
           updateHandler(rowIndex, cellIndex);
         });
 

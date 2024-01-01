@@ -1,4 +1,8 @@
 {
+    "default": {
+        "hexCode": "#7d81ff",
+        "dataCursor": "default"
+    },
     "color1": {
         "hexCode": "#ff0000",
         "dataCursor": "c1"

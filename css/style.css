@@ -173,8 +173,8 @@
           border-radius: 4px;
           display: inline-block;
           box-sizing: border-box; }
-          .action-btns .color-options .color-option-container .colors a.mark {
-            background-color: #2E3192; }
+          .action-btns .color-options .color-option-container .colors a.default {
+            background-color: #7d81ff; }
           .action-btns .color-options .color-option-container .colors a:not(:last-child) {
             margin-right: 10px; }
           .action-btns .color-options .color-option-container .colors a.selected {
@@ -206,7 +206,8 @@ body {
   .save-alert .alert {
     display: flex;
     flex-direction: row;
-    align-items: center; }
+    align-items: center;
+    padding: 5px 10px; }
 
 /***** sweet alert *****/
 div:where(.swal2-container) div:where(.swal2-popup) {
