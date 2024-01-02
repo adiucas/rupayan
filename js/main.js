@@ -1,9 +1,9 @@
-
 $("svg").attr("id", "panzoom");
 $("#p_row").addClass("pixel-row");
 $("#p_row rect").addClass("pixel-cell");
 $("#p_row path").addClass("pixel-cell");
 $("#p_row polygon").addClass("pixel-cell");
+
 
 // panzoom initialization and options
 const element = document.getElementById('panzoom')
